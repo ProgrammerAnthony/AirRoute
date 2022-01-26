@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<air-route-context xmlns="http://www.w3school.com.cn"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://www.w3school.com.cn air-route.xsd">
+    <route-map name="process1">
+        <station-node name="node1" class="com.airroute.demo.annotation.NormalFlightProcessorDemo" next="node2" begin="true"/>
+        <station-node name="node2" class="com.airroute.demo.annotation.NormalFlightProcessorDemo2" next="node3"/>
+        <station-node name="node3" class="com.airroute.demo.annotation.ReturnFlightProcessorDemo" next="node4"/>
+        <station-node name="node4" class="com.airroute.demo.annotation.NormalFlightProcessorDemo4"/>
+        <station-node name="node5" class="com.airroute.demo.annotation.NormalFlightProcessorDemo5" invoke-method="SYNC"/>
+    </route-map>
+</air-route-context>
