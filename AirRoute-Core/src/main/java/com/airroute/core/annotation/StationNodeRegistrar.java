@@ -19,6 +19,12 @@ import java.util.List;
  **/
 @Slf4j
 public class StationNodeRegistrar implements ImportBeanDefinitionRegistrar {
+
+    /**
+     * Register bean definitions as necessary based on the given annotation metadata of the importing @Configuration class.
+     * @param annotationMetadata
+     * @param beanDefinitionRegistry
+     */
     @Override
     public void registerBeanDefinitions(AnnotationMetadata annotationMetadata, BeanDefinitionRegistry beanDefinitionRegistry) {
         try {

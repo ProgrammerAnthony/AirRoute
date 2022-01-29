@@ -11,13 +11,12 @@ import java.lang.annotation.Target;
 /**
  * @author Anthony
  * @create 2022/1/26
- * @desc
+ * @desc annotation to enable the ability of AirRoute Process Engine
  **/
 @Documented
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 @Import({StationNodeRegistrar.class, ComponentScanConfig.class})
 public @interface EnableAirRoute {
-
     String value();
 }
