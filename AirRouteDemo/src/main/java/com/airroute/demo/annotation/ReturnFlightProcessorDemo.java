@@ -25,4 +25,9 @@ public class ReturnFlightProcessorDemo extends ReturnFlightProcessor {
     public void onReturnArriveProcess(FlightInfoContext flightInfoContext) {
         System.out.println("rollback ReturnFlightProcessorDemo " + flightInfoContext.getPackage("id"));
     }
+
+    @Override
+    public void caughtTerroristAttack(FlightInfoContext flightInfoContext, Throwable throwable) {
+        super.caughtTerroristAttack(flightInfoContext, throwable);
+    }
 }
