@@ -13,11 +13,13 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @Component
 public class ReturnFlightProcessorDemo extends ReturnFlightProcessor {
-    public ReturnFlightProcessorDemo(){}
+    public ReturnFlightProcessorDemo() {
+    }
+
     @Override
     protected void onArriveProcess(FlightInfoContext flightInfoContext) {
         System.out.println("ReturnFlightProcessorDemo id: " + flightInfoContext.getPackage("id"));
-        System.out.println("ReturnFlightProcessorDemo extra: " +  flightInfoContext.getPackage("extra"));
+        System.out.println("ReturnFlightProcessorDemo extra: " + flightInfoContext.getPackage("extra"));
         int i = 1 / 0;
     }
 
@@ -28,6 +30,7 @@ public class ReturnFlightProcessorDemo extends ReturnFlightProcessor {
 
     @Override
     public void caughtTerroristAttack(FlightInfoContext flightInfoContext, Throwable throwable) {
+        System.out.println("caughtTerroristAttack ");
         super.caughtTerroristAttack(flightInfoContext, throwable);
     }
 }

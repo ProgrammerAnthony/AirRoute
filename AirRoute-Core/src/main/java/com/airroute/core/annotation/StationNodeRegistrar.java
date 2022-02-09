@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * @author Anthony
  * @create 2022/1/26
- * @desc
+ * @desc entrance of annotation parse and bean conversion
  **/
 @Slf4j
 public class StationNodeRegistrar implements ImportBeanDefinitionRegistrar {

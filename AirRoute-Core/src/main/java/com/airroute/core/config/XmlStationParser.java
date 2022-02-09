@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * @author Anthony
  * @create 2022/1/26
- * @desc
+ * @desc parse xml into {@link RouteMapModel} list ,which contains {@link StationNodeModel}
  **/
 public abstract class XmlStationParser implements StationParser {
     @Override
